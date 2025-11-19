@@ -1,10 +1,10 @@
 public class Student {
     int age;
     String name;
-    String gender;
+    char gender;
     String major;
     String nationality;
-    public Student(int age, String name, String gender, String major, String nationality) {
+    public Student(int age, String name, char gender, String major, String nationality) {
         this.age = age;
         this.name = name;
         this.gender = gender;

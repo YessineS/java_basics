@@ -21,8 +21,21 @@ public class StudentManager {
             System.out.println("There are no students in the list");
             return;
         }
-        for(Student student : students) {
-            System.out.println(student);
+        for(int i=0; i<students.size(); i++) {
+            System.out.println(i + ": " + students.get(i));
+        }
+    }
+
+    public void getStudent(String name) {
+        boolean found = false;
+        for(int i=0; i<students.size(); i++) {
+            if(students.get(i).getName().equalsIgnoreCase(name)) {
+                System.out.println(i + ": " +  students.get(i));
+                found = true;
+            }
+        }
+        if(!found) {
+            System.out.println("Student not found");
         }
     }
 }
