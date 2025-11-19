@@ -14,7 +14,6 @@ public class Hello {
             }
         }
     }
-
     public static char  readChar(Scanner sc, String prompt) {
         while (true) {
             System.out.print(prompt);
@@ -62,15 +61,17 @@ public class Hello {
                     String major = readString(sc, "Enter student major: ");
                     String nationality = readString(sc, "Enter nationality: ");
 
-                    Student st = new Student(age, name, gender, major, nationality);
+                    Student st = new Student(name, age, gender, major, nationality);
                     sm.addStudent(st);
+                    sm.saveToFile("/home/yessine/Desktop/students.txt",st);
                     break;
 
                 case 2:
-                    sm.StudentList();
+                    sm.studentList();
                     break;
 
                 case 3:
+                    sm.studentList();
                     int index = readInt(sc, "Enter student index: ");
                     sm.removeStudent(index);
                     break;
